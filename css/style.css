@@ -1,0 +1,89 @@
+body {  
+  font-family: 'Ubuntu', 'Helvetica Neue', sans-serif;
+  text-align: center;
+}
+
+.players-panel{
+  display: inline-block;
+  padding-right: 10px;
+}
+
+.score-panel{
+  display: inline-block;
+  padding-right: 50px;
+}
+
+#round-color{
+  height: 30px;
+  width: 30px;
+}
+
+h1.gameTitle{
+  font-size: 60px;
+  color: black;
+  text-align: center;
+  background-color: white;
+}
+
+h1.title{
+	font-size: 35px;
+	color: black;
+  text-align: center;
+}
+
+h2.player{ 
+	font-size: 25px;
+	color: black;
+	text-align: center;
+}
+
+#turn {
+  font-size: 25px;
+  color: black;
+  text-align: center;
+}
+
+.reset-game {
+  height: 40px;
+  overflow: hidden;
+}
+
+.reset-game-bn {
+  font-size: 25px;
+  display: inline-block;
+  margin-bottom: 2em;
+  height: 40px;
+  line-height: 40px;
+  width: 30%;
+  background: gray;
+  color: white;
+  text-align: center;
+}
+
+a.reset-btn {
+  font-size: 20px;
+  background: gray;
+  color: white;
+  text-align: center;
+}
+
+div.separator{
+  font-size: 20px;
+  background: gray;
+  color: white;
+  text-align: center;
+}
+
+.board button{
+	width: 65px;
+	height: 65px;
+	border-radius: 50%;
+	border:0.5;
+	margin: 10px;
+	background: #5c6464
+}
+
+#board{
+    margin: auto;
+    background: #5c6464;
+}

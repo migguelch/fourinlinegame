@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Connect Four Game. </title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!------------------------------------------------------------------------------------------------->
+  <div class = "separator"><p>&nbsp</p></div>
+  <div>
+    <h1 class="gameTitle" >Connect four Game.</h1>
+  </div>
+  <!------------------------------------------------------------------------------------------------->  
+    <div class="players-panel"><h2>Player A</h2></div>
+    <div class="players-panel"><input id="round-color" type="color" name="colorPlayerOne" value="#000000" onchange="mang.setColorValue(this);"></div>
+    <div class="players-panel"><h2>Player B</h2></div>
+    <div class="players-panel"><input id="round-color" type="color" name="colorPlayerTwo" value="#ff0000" onchange="mang.setColorValue(this);"></div>
+    <div class="players-panel"><h2>Board</h2></div>
+    <div class="players-panel"><input id="round-color" type="color" name="colorBoard"  value="#5c6464" onchange="mang.setColorValue(this);"></div>
+  <!-------------------------------------------------------------------------------------------------->
+  <div class = "separator"><p>&nbsp</p></div>
+
+  <div >
+    <h2 class = "player" id = "player"> Player: </h2>
+  </div>
+  
+  <div class="turn">
+    <p id="turn">Turn: 1</p>
+  </div>  
+
+  <div class="reset-game">
+    <a href="#" id="reset-btn" class="reset-game-bn" onclick="mang.resetGame()">Reset the Game</a>
+  </div>
+  <div class = "separator"><p>&nbsp</p></div>
+  <div >
+    <h2 id = "player">Scores:</h2>
+    <h2 class = "score-panel" id = "player_a">Player A:</h2>
+    <h2 class = "score-panel" id = "player_b">Player B:</h2>
+  </div>
+  <div class = "separator"><p>&nbsp</p></div>
+
+<div>
+  
+  <table id="board" class="board">
+    <tr>
+      <td><button id="cell0" type="button" onclick="mang.selectedCell(0)"></button></td>
+      <td><button id="cell1" type="button" onclick="mang.selectedCell(1)"></button></td>
+      <td><button id="cell2" type="button" onclick="mang.selectedCell(2)"></button></td>
+      <td><button id="cell3" type="button" onclick="mang.selectedCell(3)"></button></td>
+      <td><button id="cell4" type="button" onclick="mang.selectedCell(4)"></button></td>
+      <td><button id="cell5" type="button" onclick="mang.selectedCell(5)"></button></td>
+      <td><button id="cell6" type="button" onclick="mang.selectedCell(6)"></button></td>
+    </tr>
+    <tr>
+      <td><button id="cell7" type="button" onclick="mang.selectedCell(7)"></button></td>
+      <td><button id="cell8" type="button" onclick="mang.selectedCell(8)"></button></td>
+      <td><button id="cell9" type="button" onclick="mang.selectedCell(9)"></button></td>
+      <td><button id="cell10" type="button" onclick="mang.selectedCell(10)"></button></td>
+      <td><button id="cell11" type="button" onclick="mang.selectedCell(11)"></button></td>
+      <td><button id="cell12" type="button" onclick="mang.selectedCell(12)"></button></td>
+      <td><button id="cell13" type="button" onclick="mang.selectedCell(13)"></button></td>
+    </tr>
+    <tr>
+      <td><button id="cell14" type="button" onclick="mang.selectedCell(14)"></button></td>
+      <td><button id="cell15" type="button" onclick="mang.selectedCell(15)"></button></td>
+      <td><button id="cell16" type="button" onclick="mang.selectedCell(16)"></button></td>
+      <td><button id="cell17" type="button" onclick="mang.selectedCell(17)"></button></td>
+      <td><button id="cell18" type="button" onclick="mang.selectedCell(18)"></button></td>
+      <td><button id="cell19" type="button" onclick="mang.selectedCell(19)"></button></td>
+      <td><button id="cell20" type="button" onclick="mang.selectedCell(20)"></button></td>
+    </tr>
+    <tr>
+      <td><button id="cell21" type="button" onclick="mang.selectedCell(21)"></button></td>
+      <td><button id="cell22" type="button" onclick="mang.selectedCell(22)"></button></td>
+      <td><button id="cell23" type="button" onclick="mang.selectedCell(23)"></button></td>
+      <td><button id="cell24" type="button" onclick="mang.selectedCell(24)"></button></td>
+      <td><button id="cell25" type="button" onclick="mang.selectedCell(25)"></button></td>
+      <td><button id="cell26" type="button" onclick="mang.selectedCell(26)"></button></td>
+      <td><button id="cell27" type="button" onclick="mang.selectedCell(27)"></button></td>
+    </tr>
+    <tr>
+      <td><button id="cell28" type="button" onclick="mang.selectedCell(28)"></button></td>
+      <td><button id="cell29" type="button" onclick="mang.selectedCell(29)"></button></td>
+      <td><button id="cell30" type="button" onclick="mang.selectedCell(30)"></button></td>
+      <td><button id="cell31" type="button" onclick="mang.selectedCell(31)"></button></td>
+      <td><button id="cell32" type="button" onclick="mang.selectedCell(32)"></button></td>
+      <td><button id="cell33" type="button" onclick="mang.selectedCell(33)"></button></td>
+      <td><button id="cell34" type="button" onclick="mang.selectedCell(34)"></button></td>
+    </tr>
+    <tr>
+      <td><button id="cell35" type="button" onclick="mang.selectedCell(35)"></button></td>
+      <td><button id="cell36" type="button" onclick="mang.selectedCell(36)"></button></td>
+      <td><button id="cell37" type="button" onclick="mang.selectedCell(37)"></button></td>
+      <td><button id="cell38" type="button" onclick="mang.selectedCell(38)"></button></td>
+      <td><button id="cell39" type="button" onclick="mang.selectedCell(39)"></button></td>
+      <td><button id="cell40" type="button" onclick="mang.selectedCell(40)"></button></td>
+      <td><button id="cell41" type="button" onclick="mang.selectedCell(41)"></button></td>
+    </tr>
+  </table>
+
+<div class = "separator">
+  <p>&nbsp</p> 
+</div>
+<script src="js/code.js"></script>
+<script language="javascript">
+  function afterPageLoad(){
+    mang.startGame();
+  }
+
+  window.onload = afterPageLoad;
+</script>
+</body>
+</html>
